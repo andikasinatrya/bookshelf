@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AplikasiPengelolaan Buku - Andika Sinatrya Diningnada</title>
+
+    <link rel="icon" href="assets/img/title-icon.jpg" type="image/icon type">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header class="head_bar">
+        <h1 class="head_bar__title">Aplikasi Pengelolaan Buku</h1>
+    </header>
+
+    <main>
+        <section class="search_section">
+            <form id="searchBook">
+                <div class="search">
+                    <input id="searchBookTitle" type="text" placeholder="Search" />
+                    <button id="searchSubmit" type="submit"><i class="bi bi-search"></i></button>
+                </div>
+                <div class="add">
+                    <button id="addBook"><i class="bi bi-plus-lg"></i><span>Tambahkan Buku</span></button>
+                </div>
+            </form>
+        </section>
+
+        <section id="formBook">
+            <div class="input_section">
+                <div class="title-input">
+                    <h2>Tambahkan Buku Baru</h2>
+                    <span id="close"><i class="bi bi-x-circle-fill"></i></span>
+                </div>
+                <form id="inputBook">
+                    <div class="input">
+                        <input id="inputBookTitle" class="required" type="text" placeholder="Title" required />
+                    </div>
+                    <div class="input">
+                        <input id="inputBookAuthor" class="required" type="text" placeholder="Author" required />
+                    </div>
+                    <div class="input">
+                        <input id="inputBookYear" class="required" type="number" placeholder="Year" required />
+                    </div>
+                    <div class="input">
+                        <input id="inputBookCategory" class="required" type="text" placeholder="Category" required />
+                    </div>
+                    <div class="input_inline">
+                        <input id="inputBookIsComplete" type="checkbox" />
+                        <label for="inputBookIsComplete">Selesai Membaca</label>
+                    </div>
+                    <button id="bookSubmit" type="submit">Tambahkan Buku Baru</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="showBook">
+            <section class="book_shelf">
+                <h2>Belum Selesai Dibaca</h2>
+                <div id="incompleteBookshelfList" class="book_list"></div>
+            </section>
+
+            <section class="book_shelf">
+                <h2>Selesai Dibaca</h2>
+                <div id="completeBookshelfList" class="book_list"></div>
+            </section>
+        </section>
+    </main>
+
+    <section id="parent-bookshelf">
+        <section class="bookshelf">
+            <div class="book book-green">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-green">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-umber">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book book-blue">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-umber">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-springer">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-blue">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book-tilted">
+                <div class="book book-umber">
+                    <h2>Harry Potter</h2>
+                </div>
+            </div>
+            <div class="book book-blue">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-green">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book book-umber">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-blue">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book book-springer">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-springer">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-green">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-blue">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book book-blue">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-blue">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-umber">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book-tilted">
+                <div class="book book-green">
+                    <h2>Actionscript:</h2>
+                    <h3>The Definitive Guide</h3>
+                </div>
+            </div>
+            <div class="book book-blue">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-springer">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-green">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book book-umber">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-blue">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-umber">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book book-green">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-green">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book book-springer">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-springer">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-umber">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book book-green">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-umber">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-blue">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book book-springer">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-springer">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book book-umber">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-green">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-green">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-umber">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+            <div class="book book-green">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="book book-springer">
+                <h2>Introducing HTML5</h2>
+            </div>
+            <div class="book book-blue">
+                <h2>CSS For Dummies</h2>
+            </div>
+            <div class="book book-blue">
+                <h2>Actionscript:</h2>
+                <h3>The Definitive Guide</h3>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <ul>
+                <li style="order: 2"><a
+                        href="https://www.instagram.com/andika_sinatrya?igsh=MWZsMmV4eHVyYjYwdg==">instagram</a></li>
+                <li style="order: 3"><a href="https://www.linkedin.com/in/andika-sinatrya-3a27282a4/">LinkedIn</a></li>
+                <li style="order: 4"><a href="#">tiktok</a></li>
+                <li style="order: 1">
+                    <p>👋</p>
+                </li>
+                <li style="order: 5">
+                    <p>👋</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
